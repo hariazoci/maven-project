@@ -4,7 +4,7 @@ pipeline {
     }
 
     parameters {
-        string defaultValue: 'beerangi', name: 'LASTNAME'
+        choice choices: ['dev', 'prod'], name: 'select_environment'
     }
 
     environment {
@@ -18,8 +18,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'mvn clean package'
-                echo "hello $NAME ${params.LASTNAME}"
+                sh 'mvn clean package -DskipTests=true'
             }
             post {
                 success {
