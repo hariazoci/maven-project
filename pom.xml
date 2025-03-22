@@ -14,8 +14,8 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <maven.compiler.source>17</maven.compiler.source> <!-- Updated to Java 17 -->
-    <maven.compiler.target>17</maven.compiler.target> <!-- Updated to Java 17 -->
+    <maven.compiler.source>17</maven.compiler.source> <!-- Adjusted for Java 17 -->
+    <maven.compiler.target>17</maven.compiler.target> <!-- Adjusted for Java 17 -->
   </properties>
 
   <modules>
@@ -63,38 +63,38 @@
 
   <dependencyManagement>
     <dependencies>
-      <!-- Dependencies with updated versions -->
+      <!-- Dependencies with fixed versions -->
       <dependency>
         <groupId>javax.servlet</groupId>
         <artifactId>servlet-api</artifactId>
-        <version>4.0.1</version> <!-- Updated -->
+        <version>4.0.1</version>
       </dependency>
       <dependency>
         <groupId>javax.servlet.jsp</groupId>
         <artifactId>jsp-api</artifactId>
-        <version>2.3.3</version> <!-- Added version -->
+        <version>2.3.3</version>
       </dependency>
       <dependency>
         <groupId>junit</groupId>
-        <artifactId>junit-dep</artifactId>
-        <version>4.13.2</version> <!-- Fixed missing version -->
+        <artifactId>junit</artifactId> <!-- Use the correct JUnit artifact -->
+        <version>4.13.2</version>
         <scope>test</scope>
       </dependency>
       <dependency>
         <groupId>org.mockito</groupId>
         <artifactId>mockito-core</artifactId>
-        <version>4.8.0</version> <!-- Fixed missing version -->
+        <version>4.8.0</version>
         <scope>test</scope>
       </dependency>
       <dependency>
         <groupId>org.hamcrest</groupId>
         <artifactId>hamcrest-core</artifactId>
-        <version>2.2</version> <!-- Fixed missing version -->
+        <version>2.2</version>
       </dependency>
       <dependency>
         <groupId>org.hamcrest</groupId>
         <artifactId>hamcrest-library</artifactId>
-        <version>2.2</version> <!-- Fixed missing version -->
+        <version>2.2</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
